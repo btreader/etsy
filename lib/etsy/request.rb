@@ -19,7 +19,7 @@ module Etsy
     end
 
     def self.put(resource_path, parameters = {})
-      request = Request.new(resource_path, parameters)
+      request = Request.new(resource_path, body=parameters, method: put)
       Response.new(request.put)
     end
     
